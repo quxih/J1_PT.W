@@ -1,0 +1,568 @@
+@font-face {
+  font-family: 'Cinzel';
+  src: url('../fonts/Cinzel-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cormorant';
+  src: url('../fonts/CormorantGaramond-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'beaufort';
+  src: url('../fonts/beau.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'birdsofparadise';
+  src: url('../fonts/Birds of Paradise.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'caslonantique';
+  src: url('../fonts/CaslonAntique.ttf') format('truetype');
+  src: url('../fonts/CaslonAntiqueItalic.ttf') format('truetype') style(italic);
+}
+
+@font-face {
+  font-family: 'minecrafttitle';
+  src: url('../fonts/Minecrafter-MA3dw.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'minecrafttext';
+  src: url('../fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'morpheus';
+  src: url('../fonts/MORPHEUS.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'reactor7';
+  src: url('../fonts/Reactor7.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'spiegel';
+  src: url('../fonts/Spiegel_TT_regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'vcrosdmono';
+  src: url('../fonts/VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'monofonto';
+  src: url('../fonts/monofonto.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'manga';
+  src: url('../fonts/mangat.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'eldenring';
+  src: url('../fonts/elden.otf') format('opentype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #b5953a;
+  font-family: 'Cinzel', 'Times New Roman', 'Georgia', serif;
+  text-align: center;
+  font-size: 30px;
+}
+
+.umsbrq {
+  font-family: 'Cormorant', 'Georgia', 'Times New Roman', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 200px;
+}
+
+.anime {
+  font-size: 14px;
+  color: #ddd;
+  font-family: 'manga', 'Comic Sans MS', 'Arial Black', sans-serif;
+}
+
+.gameinfo {
+  display: flex;
+  flex-direction: column; 
+}
+
+.gameinfo h2 {
+  margin: auto;
+  color: white; 
+}
+
+.image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: auto 200px 200px 325px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: #1c1c1c;
+  padding: 15px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.mc {
+  background-image: url('pics/videospiele/mc.png');
+}
+
+.mc h2 {
+  font-family: 'minecrafttitle', 'Comic Sans MS', 'Impact', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  line-height: 1.6;
+  width: auto;
+  font-size: 30px;
+}
+
+.mc p {
+  font-family: 'minecrafttext', 'Courier New', 'Monospace', monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 17px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+  width: auto;
+}
+
+.fnv {
+  background: rgba(0, 0, 0, 0.8);
+  color: #FFD700;
+  padding: 20px;
+  width: 500px;
+  margin: 50px auto;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  border-top: 2px solid #FFD700;
+  border-bottom: 2px solid #FFD700;
+  border-radius: 6px;
+  width: auto;
+}
+
+.fnv p {
+  margin: 10px 0;
+  color: #FFD700;
+  font-family: 'monofonto', 'Courier New', 'Monospace', monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.mab {
+  position: relative;
+  bottom: 20px;
+  width: 740px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mab::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid #F5D6B2;
+  border-radius: 8px;
+}
+
+.mab h2{
+  font-family: 'morpheus', 'Georgia', 'Times New Roman', serif;
+  margin: auto;
+  font-size: 24px;
+  color: #cfb682; 
+}
+
+.mab p {
+  margin: 0;
+  color: white;
+  font-family: 'caslonantique', 'Georgia', 'Times New Roman', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.ff7 {
+  position: relative;
+  bottom: 10px;
+  width: 740px;
+  padding: 15px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  color: #FFFF66;
+  background: linear-gradient(165deg, rgb(0,0,176), rgb(0,0,32));
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.ff7 p {
+  margin: 0;
+  color: white;
+  font-family: 'reactor7', 'Courier New', 'Monospace', monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.ult {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  width: 500px;
+  margin: 50px auto;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  border-radius: 1px;
+  width: auto;
+}
+
+.ult h2{
+  font-family: 'vcrosdmono', 'Courier New', 'Monospace', monospace;
+  margin: auto;
+  font-size: 30px;
+  color: red; 
+}
+
+.ult p {
+  margin: 10px 0;
+  color: white;
+  font-family: 'vcrosdmono', 'Courier New', 'Monospace', monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+  width: auto;
+}
+
+.er {
+  background-image: url('pics/videospiele/eldenringb.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.er h2{
+  font-family: 'eldenring', 'Georgia', 'Times New Roman', serif;
+  margin: auto;
+  font-size: 30px;
+  color: #F0E6D2; 
+  text-shadow: #1a1a1a 2px 2px 4px;
+  backdrop-filter: blur(5px);
+}
+
+.er p {
+  font-family: Arial, Helvetica, sans-serif, serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+  width: auto;
+  text-shadow: #1a1a1a 2px 2px 4px;
+  color: white;
+  backdrop-filter: blur(2px);
+}
+
+.lol {
+  position: auto;
+  margin: 50px auto;
+  width: 700px;
+  padding: 20px;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  color: #F0E6D2;
+  text-align: center;
+  background: #0d1721;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, #c8aa6e, #f0e6d2, #c8aa6e) 1;
+  border-radius: 12px;
+  box-shadow: inset 0 0 15px rgba(240, 230, 210, 0.2), 0 0 25px rgba(200, 170, 110, 0.4);
+}
+
+.lol p {
+  margin: 0;
+  color: #F0E6D2;
+  font-family: 'beaufort', 'Arial', 'Helvetica', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 15px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.card {
+  height: 200vh;
+  padding: 150px 40px;
+  max-width: 900px;
+  margin: 100px auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  opacity: 1;
+}
+
+.item .quelle {
+  font-family: 'Cormorant', 'Georgia', 'Times New Roman', serif;
+  font-style: normal;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.um {
+  font-family: 'Cormorant', 'Georgia', 'Times New Roman', serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  margin: 12px 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+
+.top-navbar {
+  position: fixed;
+  top: -49px;
+  left: 140px;
+  width: calc(100% - 140px);
+  height: 50px;
+  overflow: hidden;
+  background-color: #1c1c1c;
+  font-family: 'Cinzel', Arial, sans-serif;
+  font-size: 10px;
+  z-index: 1000;
+  box-shadow: 0 20px 20px rgba(0,0,0,0.5);
+  border-bottom: 8px solid #8a3ab5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top 0.3s ease;
+}
+
+.top-navbar:hover {
+  top: 0px;
+}
+
+.top-navbar a {
+  flex: 1;
+  padding: 17px 25px;
+  display: flex;
+  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #c7c7c7;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 17px;
+}
+
+.top-navbar:hover a {
+  opacity: 1;
+}
+
+.top-navbar a:hover {
+  background-color: #2f2f2f;
+  color: #be7bbf;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 100%;
+  background: linear-gradient(90deg, #2d2d2d, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  z-index: 998;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+}
+
+.navbar a {
+  width: 120px;
+  margin: 10px 0;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Cinzel', Arial, Helvetica, sans-serif;
+  text-align: left;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #2f2f2f;
+  color: #d4af37;
+}
+
+.navbar a.active {
+  background-color: #2f2f2f;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.zuruck {
+  position: fixed;
+  bottom: 20px;
+  left: 0px;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.zuruck:hover {
+  background-color: black;
+  color: #d4af37;
+}
+
+.section {
+  position: relative;
+  margin-left: 140px;
+  width: calc(100% - 140px);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  transition: opacity 0.6s ease;
+}
+
+.section1::before {
+  background-image: url('pics/tvs/breakingbad.webp');
+}
+
+.section2::before {
+  background-image: url('pics/tvs/theboys.webp');
+}
+
+.section3::before {
+  background-image: url('pics/tvs/dexter.webp');
+}
+
+.section4::before {
+  background-image: url('pics/tvs/arcane.webp');
+}
+
+.parallax-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  max-width: 900px;
+}
+
+.parallax-content h1 {
+  font-size: 20px;
+  font-family: 'Cinzel', 'Times New Roman', 'Georgia', serif;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-content p {
+  font-size: 16px;
+  font-family: 'Cormorant', 'Georgia', 'Times New Roman', serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.photo-gallery {
+  margin-left: 150px; 
+  margin-right: 10px;
+  margin-top: 70px; 
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background: rgba(30, 30, 30, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); 
+  display: block; 
+}
