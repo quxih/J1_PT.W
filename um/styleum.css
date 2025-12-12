@@ -25,7 +25,7 @@
 @font-face {
   font-family: 'caslonantique';
   src: url('../fonts/CaslonAntique.ttf') format('truetype');
-  src: url('../fonts/CaslonAntiqueItalic.ttf') format('truetype') style(italic);
+  src: url('../fonts/CaslonAntiqueItalic.ttf') format('truetype');
 }
 
 @font-face {
@@ -105,12 +105,12 @@ h1 {
 }
 
 .gameinfo {
-  display: flex;
-  flex-direction: column; 
+  display: block;
 }
 
 .gameinfo h2 {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   color: white; 
 }
 
@@ -122,26 +122,31 @@ h1 {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   margin: auto 200px 200px 325px;
 }
 
 .item {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
   background-color: #1c1c1c;
   padding: 15px;
-  margin: auto;
-  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  zoom: 1;
+}
+
+.item:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .item img {
   width: 150px;
   height: auto;
-  border-radius: 5px;
+  float: left;
+  margin-right: 10px;
 }
 
 .mc {
@@ -178,7 +183,6 @@ h1 {
   font-size: 16px;
   border-top: 2px solid #FFD700;
   border-bottom: 2px solid #FFD700;
-  border-radius: 6px;
   width: auto;
 }
 
@@ -200,9 +204,6 @@ h1 {
   width: 740px;
   background: rgba(0, 0, 0, 0.7);
   padding: 15px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  position: relative;
 }
 
 .mab::before {
@@ -213,12 +214,12 @@ h1 {
   right: 5px;
   bottom: 5px;
   border: 1px solid #F5D6B2;
-  border-radius: 8px;
 }
 
 .mab h2{
   font-family: 'morpheus', 'Georgia', 'Times New Roman', serif;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 24px;
   color: #cfb682; 
 }
@@ -242,10 +243,8 @@ h1 {
   font-family: 'Courier New', monospace;
   font-size: 16px;
   color: #FFFF66;
-  background: linear-gradient(165deg, rgb(0,0,176), rgb(0,0,32));
+  background: #000050;
   border: 2px solid #FFFFFF;
-  border-radius: 5px;
-  box-sizing: border-box;
 }
 
 .ff7 p {
@@ -267,13 +266,13 @@ h1 {
   margin: 50px auto;
   font-family: 'Courier New', monospace;
   font-size: 16px;
-  border-radius: 1px;
   width: auto;
 }
 
 .ult h2{
   font-family: 'vcrosdmono', 'Courier New', 'Monospace', monospace;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 30px;
   color: red; 
 }
@@ -292,7 +291,7 @@ h1 {
 }
 
 .er {
-  background-image: url('pics/videospiele/eldenringb.webp');
+  background-image: url('pics/videospiele/eldenringb.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -300,11 +299,12 @@ h1 {
 
 .er h2{
   font-family: 'eldenring', 'Georgia', 'Times New Roman', serif;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 30px;
   color: #F0E6D2; 
   text-shadow: #1a1a1a 2px 2px 4px;
-  backdrop-filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5);
 }
 
 .er p {
@@ -318,11 +318,10 @@ h1 {
   width: auto;
   text-shadow: #1a1a1a 2px 2px 4px;
   color: white;
-  backdrop-filter: blur(2px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=2);
 }
 
 .lol {
-  position: auto;
   margin: 50px auto;
   width: 700px;
   padding: 20px;
@@ -331,10 +330,7 @@ h1 {
   color: #F0E6D2;
   text-align: center;
   background: #0d1721;
-  border: 3px solid transparent;
-  border-image: linear-gradient(90deg, #c8aa6e, #f0e6d2, #c8aa6e) 1;
-  border-radius: 12px;
-  box-shadow: inset 0 0 15px rgba(240, 230, 210, 0.2), 0 0 25px rgba(200, 170, 110, 0.4);
+  border: 3px solid #c8aa6e;
 }
 
 .lol p {
@@ -354,8 +350,6 @@ h1 {
   max-width: 900px;
   margin: 100px auto;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   opacity: 1;
 }
 
@@ -381,19 +375,15 @@ h1 {
   position: fixed;
   top: -49px;
   left: 140px;
-  width: calc(100% - 140px);
+  width: auto;
   height: 50px;
   overflow: hidden;
   background-color: #1c1c1c;
   font-family: 'Cinzel', Arial, sans-serif;
   font-size: 10px;
   z-index: 1000;
-  box-shadow: 0 20px 20px rgba(0,0,0,0.5);
   border-bottom: 8px solid #8a3ab5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: top 0.3s ease;
+  text-align: center;
 }
 
 .top-navbar:hover {
@@ -401,21 +391,13 @@ h1 {
 }
 
 .top-navbar a {
-  flex: 1;
   padding: 17px 25px;
-  display: flex;
+  display: inline-block;
   font-family: 'Cinzel', Arial, Helvetica, sans-serif;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   color: #c7c7c7;
-  transition: all 0.3s;
   position: relative;
   font-size: 17px;
-}
-
-.top-navbar:hover a {
-  opacity: 1;
 }
 
 .top-navbar a:hover {
@@ -429,14 +411,10 @@ h1 {
   left: 0;
   width: 140px;
   height: 100%;
-  background: linear-gradient(90deg, #2d2d2d, #1a1a1a);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #1a1a1a;
   padding-top: 20px;
   padding-bottom: 80px;
   z-index: 998;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
 .navbar a {
@@ -447,9 +425,8 @@ h1 {
   text-decoration: none;
   font-family: 'Cinzel', Arial, Helvetica, sans-serif;
   text-align: left;
-  border-radius: 6px;
   white-space: nowrap;
-  transition: background-color 0.3s, color 0.3s;
+  display: block;
 }
 
 .navbar a:hover {
@@ -471,9 +448,7 @@ h1 {
   color: white;
   text-decoration: none;
   text-align: left;
-  border-radius: 6px;
   white-space: nowrap;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .zuruck:hover {
@@ -484,12 +459,10 @@ h1 {
 .section {
   position: relative;
   margin-left: 140px;
-  width: calc(100% - 140px);
+  width: auto;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
 .section::before {
@@ -502,23 +475,22 @@ h1 {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  transition: opacity 0.6s ease;
 }
 
 .section1::before {
-  background-image: url('pics/tvs/breakingbad.webp');
+  background-image: url('pics/tvs/breakingbad.jpg');
 }
 
 .section2::before {
-  background-image: url('pics/tvs/theboys.webp');
+  background-image: url('pics/tvs/theboys.jpg');
 }
 
 .section3::before {
-  background-image: url('pics/tvs/dexter.webp');
+  background-image: url('pics/tvs/dexter.jpg');
 }
 
 .section4::before {
-  background-image: url('pics/tvs/arcane.webp');
+  background-image: url('pics/tvs/arcane.jpg');
 }
 
 .parallax-content {
@@ -527,9 +499,11 @@ h1 {
   color: white;
   background: rgba(0, 0, 0, 0.5);
   padding: 10px 10px 10px 10px;
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=5);
   max-width: 900px;
+  margin: 0 auto;
+  top: 50%;
+  margin-top: -100px;
 }
 
 .parallax-content h1 {
@@ -550,19 +524,180 @@ h1 {
   margin-right: 10px;
   margin-top: 70px; 
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
   background: rgba(30, 30, 30, 0.5);
-  box-sizing: border-box;
-  border-radius: 10px;
+  zoom: 1;
+}
+
+.photo-gallery:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .photo-gallery img {
-  width: 100%;
+  width: 250px;
   height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); 
+  float: left;
+  margin: 10px;
   display: block; 
+}
+
+@supports (display: flex) {
+  .gameinfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .gameinfo h2 {
+    margin: auto;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  .item:after {
+    content: none;
+  }
+  
+  .item img {
+    float: none;
+    margin-right: 0;
+    border-radius: 5px;
+  }
+  
+  .mab {
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .mab::before {
+    border-radius: 8px;
+  }
+  
+  .mab h2 {
+    margin: auto;
+  }
+  
+  .ff7 {
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: linear-gradient(165deg, rgb(0,0,176), rgb(0,0,32));
+  }
+  
+  .fnv {
+    border-radius: 6px;
+  }
+  
+  .ult h2 {
+    margin: auto;
+  }
+  
+  .er h2 {
+    margin: auto;
+    backdrop-filter: blur(5px);
+  }
+  
+  .er p {
+    backdrop-filter: blur(2px);
+  }
+  
+  .lol {
+    border-radius: 12px;
+    border-image: linear-gradient(90deg, #c8aa6e, #f0e6d2, #c8aa6e) 1;
+    box-shadow: inset 0 0 15px rgba(240, 230, 210, 0.2), 0 0 25px rgba(200, 170, 110, 0.4);
+  }
+  
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .top-navbar {
+    width: calc(100% - 140px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s ease;
+  }
+  
+  .top-navbar a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  
+  .top-navbar:hover a {
+    opacity: 1;
+  }
+  
+  .navbar {
+    background: linear-gradient(90deg, #2d2d2d, #1a1a1a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .navbar a {
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .zuruck {
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .section {
+    width: calc(100% - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section::before {
+    transition: opacity 0.6s ease;
+  }
+  
+  .parallax-content {
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    top: auto;
+    margin-top: 0;
+  }
+  
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .photo-gallery:after {
+    content: none;
+  }
+  
+  .photo-gallery img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    float: none;
+    margin: 0;
+  }
 }
